@@ -2,6 +2,7 @@ import React from "react";
 import * as styled from './HomePage.styles'
 import VotingPanel from "./VoteingPanel/VotingPanel";
 import ParticlesBackground from "./particles/Particles-background";
+import imageURL from './images/Thashil2.png'
 
 const HomePage = () => {
     return (
@@ -10,7 +11,7 @@ const HomePage = () => {
             <styled.HomePageContainer>
                  <styled.ContentContainer>
                     <styled.imageContainer>
-                        <styled.conestantImage src="/images/Thashil2.png"/>
+                        <styled.conestantImage src={imageURL}/>
                     </styled.imageContainer>
                     <styled.imageContainer>
                         <VotingPanel/>
