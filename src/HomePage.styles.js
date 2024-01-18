@@ -1,12 +1,13 @@
 import styled from "@emotion/styled";
 
 export const HomePageContainer = styled.div`
-    height: 100vh;
+    height: ${props=> props.isMobile ? "auto" : "100vh"};
     width: 100vw;
     background-image : url('./images/future.jpg');
     background-size: cover;
     display:flex;
     flex-directions: column;
+    overflow-y: auto;
 `
 export const ContentContainer = styled.div` 
     display: flex;
@@ -33,5 +34,8 @@ export const imageContainer = styled.div`
 `
 
 export const conestantImage = styled.img`
-    height: ${props => props.isMobile ? '80%' : '100%'};
+    height: ${props => props.isMobile ? '80%' : '90%'};
+    ${props => props.isMobile && ` 
+        width:100%;
+    `}
 `

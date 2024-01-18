@@ -200,12 +200,13 @@ margin-top: 17px;
  *
  * @license MIT
  */const $C="startTransition",Yh=Ni[$C];function NC(e){let{basename:t,children:n,future:r,window:i}=e,o=x.useRef();o.current==null&&(o.current=fC({window:i,v5Compat:!0}));let s=o.current,[l,a]=x.useState({action:s.action,location:s.location}),{v7_startTransition:u}=r||{},d=x.useCallback(p=>{u&&Yh?Yh(()=>a(p)):a(p)},[a,u]);return x.useLayoutEffect(()=>s.listen(d),[s,d]),x.createElement(zC,{basename:t,children:n,location:l.location,navigationType:l.action,navigator:s,future:r})}var qh;(function(e){e.UseScrollRestoration="useScrollRestoration",e.UseSubmit="useSubmit",e.UseSubmitFetcher="useSubmitFetcher",e.UseFetcher="useFetcher",e.useViewTransitionState="useViewTransitionState"})(qh||(qh={}));var Xh;(function(e){e.UseFetcher="useFetcher",e.UseFetchers="useFetchers",e.UseScrollRestoration="useScrollRestoration"})(Xh||(Xh={}));const LC=()=>{PC();const e=t0(),t=Hl(o=>o.isMobileState.menuOpen),n=Hl(o=>o.isMobileState.isMobile),r=o=>{},i=()=>{e(U2(!t)),console.log(t)};return _.jsx(_.Fragment,{children:_.jsx(kS,{isMobile:n,children:_.jsxs(ES,{children:[_.jsx(_S,{isMobile:n,children:"TicketCrew"}),_.jsx(PS,{isOpen:t,isMobile:n,onClick:()=>{i()},children:t?_.jsx(Ks,{iconName:"menuClosed",iconSize:"1.5em"}):_.jsx(Ks,{iconName:"menuOpen",iconSize:"1.5em"})}),_.jsxs(TS,{isMobile:n,isOpen:t,children:[_.jsx(Hs,{destination:"/",text:"Home"}),_.jsx(Hs,{destination:"/about",text:"About Us"}),_.jsx(Hs,{destination:"/services",text:"Services"}),_.jsx(Hs,{destination:"/contact-us",text:"Contact Us"}),_.jsxs(MS,{isMobile:n,children:[_.jsx(Mh,{children:_.jsx(Ks,{onClick:r,iconName:"facebook",iconSize:"1.2em",iconColor:"white"})}),_.jsx(Mh,{children:_.jsx(Ks,{onClick:r,iconName:"instagram",iconSize:"1.2em",iconColor:"white"})})]})]})]})})})},AC=Te.div`
-    height: 100vh;
+    height: ${e=>e.isMobile?"auto":"100vh"};
     width: 100vw;
     background-image : url('./images/future.jpg');
     background-size: cover;
     display:flex;
     flex-directions: column;
+    overflow-y: auto;
 `,FC=Te.div` 
     display: flex;
     height: 100%;
@@ -225,7 +226,10 @@ margin-top: 17px;
     height: 100%;
     width: ${e=>e.isMobile?"100%":"50%"};
 `,DC=Te.img`
-    height: ${e=>e.isMobile?"80%":"100%"};
+    height: ${e=>e.isMobile?"80%":"90%"};
+    ${e=>e.isMobile&&` 
+        width:100%;
+    `}
 `,jC=Te.div`
     background: rgba(181,181,181,0.1);
     backdrop-filter: blur(5px);
