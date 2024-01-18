@@ -3,23 +3,26 @@ import NavItem from "../navItem/NavItem";
 import * as styled from './HeaderBar.styles'
 // import logo from '../../images/Whyus_logo.png'
 import Icons from "../icons/Icons";
+import { setMenuOpenState } from "../redux/isMobile";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 // import { useDispatch, useSelector } from "react-redux";
 // import { setMenuOpenState } from "../../redux/isMobile";
 const HeaderBar = () => {
     
-    // const navigate = useNavigate();
-    // const dispatch = useDispatch();        
-    const isOpen = false
-    const isMobile = false;
+    const navigate = useNavigate();
+    const dispatch = useDispatch();        
+    const isOpen = useSelector(state => state.isMobileState.menuOpen)
+    const isMobile = useSelector(state => state.isMobileState.isMobile);
     const handleClick = (link) => {
     }
 
     const HandleMenuClick = () => {
+        dispatch(setMenuOpenState(!isOpen));
         console.log(isOpen);
 
     }
-
     return (
     <>
     <styled.NavBar isMobile={isMobile}>

@@ -5,6 +5,8 @@ export const HomePageContainer = styled.div`
     width: 100vw;
     background-image : url('./images/future.jpg');
     background-size: cover;
+    display:flex;
+    flex-directions: column;
 `
 export const ContentContainer = styled.div` 
     display: flex;
@@ -12,6 +14,12 @@ export const ContentContainer = styled.div`
     width: 100%;
     margin-top: 100px;
     backdrop-filter : blur(15px);
+    flex-grow: 1;
+    ${props => props.isMobile &&
+        `
+            flex-direction: column;
+        `
+    }
 
 `
 
@@ -21,9 +29,9 @@ export const imageContainer = styled.div`
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 50%;
+    width: ${props => props.isMobile ? '100%' : '50%'};
 `
 
 export const conestantImage = styled.img`
-    height: 100%;
+    height: ${props => props.isMobile ? '80%' : '100%'};
 `
