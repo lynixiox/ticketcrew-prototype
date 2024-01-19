@@ -33,7 +33,7 @@ const VotingPanel = () => {
                     </styled.headingContainer>
                     <styled.componentContainer>
                         {isCheckout ? 
-
+                            //comment added//
                            <>
                                 <styled.componentItem>
                                     <TextInput label="Name" textColor="#fff" borderBottomColor="#fff" value={Name} onChange={(event) => {setName(event.target.value)}}/>
