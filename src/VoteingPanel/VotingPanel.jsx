@@ -9,7 +9,7 @@ import LabelPlain from "../label/LabelPlain";
 const VotingPanel = () => {
 
     const optionList = [
-        {optionValue: "10", optionName: "5 VOTE BUNDLE (R2 p/vote)"},
+        {optionValue: "11", optionName: "5 VOTE BUNDLE (R2 p/vote)"},
         {optionValue: "180", optionName: "100 VOTE BUNDLE (R1.80 p/vote)"},
         {optionValue: "250", optionName: "200 VOTE BUNDLE (R1.50 p/vote)"},
         {optionValue: "500", optionName: "500 VOTE BUNDLE (R1 p/vote)"},
