@@ -28,7 +28,7 @@ const HeaderBar = () => {
     <styled.NavBar isMobile={isMobile}>
         <styled.NavBarContainer>
             <styled.NavBarLogoContainer isMobile={isMobile}>
-                Carls Mom
+                TicketCrew
             </styled.NavBarLogoContainer>
             <styled.MenuIcon isOpen={isOpen} isMobile={isMobile} onClick={()=> {HandleMenuClick()}}>
                 {isOpen ? <Icons iconName="menuClosed" iconSize="1.5em"/> : <Icons iconName="menuOpen" iconSize="1.5em"/>}
